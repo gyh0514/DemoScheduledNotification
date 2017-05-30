@@ -21,11 +21,14 @@ public class ScheduledNotificationReceiver extends BroadcastReceiver {
 
         // build notification
         Notification.Builder builder = new Notification.Builder(context);
+        
         builder.setContentTitle("Amazing Offer!");
         builder.setContentText("Subject");
         builder.setSmallIcon(android.R.drawable.ic_dialog_info);
+
         builder.setContentIntent(pIntent);
         builder.setAutoCancel(true);
+
         Notification n = builder.build();
         NotificationManager notificationManager = (NotificationManager)
                 context.getSystemService(Context.NOTIFICATION_SERVICE);
